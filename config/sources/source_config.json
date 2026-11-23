@@ -1,0 +1,163 @@
+{
+  "sources": [
+    {
+      "source_id": "SRC-LAB-A",
+      "lab_id": "LAB-01",
+      "instrument_id": "INST-A-THERMO-7",
+      "instrument_model": "thermo-a",
+      "protocol_id": "PROTO-A-v3",
+      "file": "lab_a_thermo.csv",
+      "format": "csv",
+      "columns": {
+        "sample_id": "sample_id",
+        "observed_at": "measured_at",
+        "conditions": {"pressure_kPa": "ambient_pressure_kPa"}
+      },
+      "measurements": [
+        {
+          "column": "temperature",
+          "metric_code": "TEMP_MEAS",
+          "unit_code": "degC",
+          "measurement_kind": "absolute",
+          "basis_code": "ambient-air"
+        }
+      ]
+    },
+    {
+      "source_id": "SRC-LAB-A-VOL",
+      "lab_id": "LAB-01",
+      "instrument_id": "INST-A-PIPETTE-2",
+      "instrument_model": "pipette-robot-x",
+      "protocol_id": "PROTO-A-v3",
+      "file": "lab_a_volume.csv",
+      "format": "csv",
+      "columns": {
+        "sample_id": "sample_id",
+        "observed_at": "measured_at",
+        "conditions": {"calibration_id": "calib_id"}
+      },
+      "measurements": [
+        {
+          "column": "volume",
+          "metric_code": "SAMPLE_VOLUME",
+          "unit_code": "uL",
+          "measurement_kind": "absolute",
+          "basis_code": "calibrated-glassware"
+        }
+      ]
+    },
+    {
+      "source_id": "SRC-LAB-B",
+      "lab_id": "LAB-02",
+      "instrument_id": "INST-B-SENSOR-3",
+      "instrument_model": "sensor-c",
+      "protocol_id": "PROTO-B-v1",
+      "file": "lab_b_sensor.csv",
+      "format": "csv",
+      "columns": {
+        "sample_id": "sample_id",
+        "observed_at": "ts",
+        "conditions": {
+          "gas_ref_temp_C": "ref_temp_C",
+          "gas_ref_pressure_kPa": "ref_pressure_kPa",
+          "reference_temp_C": "ref_temp_C"
+        }
+      },
+      "measurements": [
+        {
+          "column": "temperature",
+          "metric_code": "TEMP_DELTA",
+          "unit_code": "degC_delta",
+          "measurement_kind": "difference",
+          "basis_code": "delta-reference"
+        },
+        {
+          "column": "gas_conc",
+          "metric_code": "ANALYTE_WET",
+          "unit_code": "mg_per_m3",
+          "measurement_kind": "absolute",
+          "basis_code": "gas-standard-volume"
+        }
+      ]
+    },
+    {
+      "source_id": "SRC-LAB-C",
+      "lab_id": "LAB-03",
+      "instrument_id": "INST-C-MS-11",
+      "instrument_model": "mass-spec-b",
+      "protocol_id": "PROTO-C-v2",
+      "file": "lab_c_massspec.csv",
+      "format": "csv",
+      "columns": {
+        "sample_id": "sample",
+        "observed_at": "observed_at",
+        "conditions": {
+          "dry_temp_C": "drying_temp_C",
+          "dry_humidity_pct": "drying_humidity_pct"
+        }
+      },
+      "measurements": [
+        {
+          "column": "analyte_ppm",
+          "metric_code": "ANALYTE_DRY",
+          "unit_code": "ug_per_kg",
+          "measurement_kind": "absolute",
+          "basis_code": "dry-mass"
+        }
+      ]
+    },
+    {
+      "source_id": "SRC-LAB-C-CTRL",
+      "lab_id": "LAB-03",
+      "instrument_id": "INST-C-CHAMBER-1",
+      "instrument_model": "chamber-controller-z",
+      "protocol_id": "PROTO-C-v2",
+      "file": "lab_c_setpoint.csv",
+      "format": "csv",
+      "columns": {
+        "sample_id": "sample",
+        "observed_at": "observed_at",
+        "conditions": {"chamber_id": "chamber"}
+      },
+      "measurements": [
+        {
+          "column": "temperature",
+          "metric_code": "TEMP_SETPOINT",
+          "unit_code": "degC_setpoint",
+          "measurement_kind": "setpoint",
+          "basis_code": "chamber-setpoint"
+        }
+      ]
+    },
+    {
+      "source_id": "SRC-LEGACY",
+      "lab_id": "LAB-99",
+      "instrument_id": "INST-LEGACY-0",
+      "instrument_model": "legacy-analyzer-1998",
+      "protocol_id": "PROTO-LEGACY",
+      "file": "legacy_results.jsonl",
+      "format": "jsonl",
+      "default_conditions": {"legacy_import": true},
+      "columns": {
+        "sample_id": "sample_id",
+        "observed_at": "observed_at"
+      },
+      "measurements": [
+        {
+          "column": "reading",
+          "metric_code": "ANALYTE_DRY",
+          "unit_code": "vendor_scale",
+          "measurement_kind": "absolute",
+          "basis_code": "unknown"
+        },
+        {
+          "column": "volume_reading",
+          "metric_code": "SAMPLE_VOLUME",
+          "unit_code": "uL",
+          "measurement_kind": "absolute",
+          "basis_code": "unverified-pipette"
+        }
+      ]
+    }
+  ]
+}

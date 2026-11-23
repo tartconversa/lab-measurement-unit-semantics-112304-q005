@@ -1,0 +1,13 @@
+{
+  "policy_id": "POLICY-CROSS-LAB-ANALYTE",
+  "description": "跨实验室分析物合并策略：仅允许经领域管理员批准、基准条件齐备的语义键。温度设定值、温差、未知基准、厂商私有标度一律不得并入。",
+  "registry_version": "REG-2026-01",
+  "created_by": "research-analyst-li",
+  "allow_comparability_keys": [
+    "ANALYTE_DRY|dry-mass|absolute|CG-DRY-MASS",
+    "ANALYTE_WET|gas-standard-volume|absolute|CG-GAS-STD",
+    "TEMP_MEAS|ambient-air|absolute|CG-TEMP-AMB",
+    "TEMP_DELTA|delta-reference|difference|CG-TEMP-DELTA",
+    "SAMPLE_VOLUME|calibrated-glassware|absolute|CG-VOL-CAL"
+  ]
+}

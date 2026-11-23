@@ -1,0 +1,6 @@
+{
+  "_comment": "语义校验规则严重级别覆盖配置。未列出的规则使用代码内默认级别。error=排除，warning=受限保留原单位，info=仅提示。",
+  "severity_overrides": {
+    "N001": "info"
+  }
+}

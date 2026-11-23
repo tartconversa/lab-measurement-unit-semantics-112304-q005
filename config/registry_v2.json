@@ -1,0 +1,343 @@
+{
+  "registry_version": "REG-2026-02",
+  "published_at": "2026-06-01T00:00:00Z",
+  "units": [
+    {
+      "unit_code": "K",
+      "name": "开尔文（绝对温度标准单位）",
+      "dimension": "temperature",
+      "standard_unit": "K",
+      "measurement_kind": "absolute",
+      "scale": 1.0,
+      "offset": 0.0,
+      "conversion_id": "CV-K-v1",
+      "standard_version": "SI-2019",
+      "valid_from": "2026-01-15",
+      "note": "标准单位"
+    },
+    {
+      "unit_code": "degC",
+      "name": "摄氏度（绝对温度）",
+      "dimension": "temperature",
+      "standard_unit": "K",
+      "measurement_kind": "absolute",
+      "scale": 1.0,
+      "offset": 273.15,
+      "conversion_id": "CV-degC-v1",
+      "standard_version": "SI-2019",
+      "valid_from": "2026-01-15",
+      "note": "K = degC + 273.15"
+    },
+    {
+      "unit_code": "K_delta",
+      "name": "开尔文温差",
+      "dimension": "temperature",
+      "standard_unit": "K_delta",
+      "measurement_kind": "difference",
+      "scale": 1.0,
+      "offset": 0.0,
+      "conversion_id": "CV-Kdelta-v1",
+      "standard_version": "SI-2019",
+      "valid_from": "2026-01-15",
+      "note": "差值量禁止使用带偏移换算"
+    },
+    {
+      "unit_code": "degC_delta",
+      "name": "摄氏度温差",
+      "dimension": "temperature",
+      "standard_unit": "K_delta",
+      "measurement_kind": "difference",
+      "scale": 1.0,
+      "offset": 0.0,
+      "conversion_id": "CV-degCdelta-v1",
+      "standard_version": "SI-2019",
+      "valid_from": "2026-01-15",
+      "note": "温差 1 degC = 1 K，无偏移"
+    },
+    {
+      "unit_code": "degC_setpoint",
+      "name": "摄氏度设定值（设备控制目标）",
+      "dimension": "temperature",
+      "standard_unit": "K_setpoint",
+      "measurement_kind": "setpoint",
+      "scale": 1.0,
+      "offset": 273.15,
+      "conversion_id": "CV-degCset-v1",
+      "standard_version": "SI-2019",
+      "valid_from": "2026-01-15",
+      "note": "设定值与被测温度语义不同，禁止并入 TEMP_MEAS"
+    },
+    {
+      "unit_code": "mg_per_kg",
+      "name": "毫克每千克（干质量归一浓度）",
+      "dimension": "mass-fraction",
+      "standard_unit": "mg_per_kg",
+      "measurement_kind": "absolute",
+      "scale": 1.0,
+      "offset": 0.0,
+      "conversion_id": "CV-mgkg-v1",
+      "standard_version": "INTERNAL-DM-2025",
+      "valid_from": "2026-01-15",
+      "note": "标准单位；干质量基准"
+    },
+    {
+      "unit_code": "ug_per_kg",
+      "name": "微克每千克（干质量归一浓度）",
+      "dimension": "mass-fraction",
+      "standard_unit": "mg_per_kg",
+      "measurement_kind": "absolute",
+      "scale": 0.001,
+      "offset": 0.0,
+      "conversion_id": "CV-ugkg-v2",
+      "standard_version": "INTERNAL-DM-2026",
+      "valid_from": "2026-06-01",
+      "note": "1 ug/kg = 0.001 mg/kg"
+    },
+    {
+      "unit_code": "mg_per_L",
+      "name": "毫克每升（湿体积归一浓度）",
+      "dimension": "mass-concentration",
+      "standard_unit": "mg_per_L",
+      "measurement_kind": "absolute",
+      "scale": 1.0,
+      "offset": 0.0,
+      "conversion_id": "CV-mgL-v1",
+      "standard_version": "INTERNAL-WV-2025",
+      "valid_from": "2026-01-15",
+      "note": "标准单位；湿体积基准，与干质量归一不可直接互算"
+    },
+    {
+      "unit_code": "mg_per_m3",
+      "name": "毫克每立方米（气体，湿体积归一，20°C/101.325kPa）",
+      "dimension": "mass-concentration",
+      "standard_unit": "mg_per_L",
+      "measurement_kind": "absolute",
+      "scale": 0.024,
+      "offset": 0.0,
+      "conversion_id": "CV-mgm3-v2",
+      "standard_version": "GAS-STD-2026",
+      "valid_from": "2026-06-01",
+      "template": "gas_molar_volume",
+      "template_params": {
+        "molar_volume_L_per_mol": 24.0
+      },
+      "note": "标准修订：基准温压改为 20°C/101.325kPa，摩尔体积 24.0 L/mol"
+    },
+    {
+      "unit_code": "mL",
+      "name": "毫升（体积）",
+      "dimension": "volume",
+      "standard_unit": "mL",
+      "measurement_kind": "absolute",
+      "scale": 1.0,
+      "offset": 0.0,
+      "conversion_id": "CV-mL-v1",
+      "standard_version": "SI-2019",
+      "valid_from": "2026-01-15",
+      "note": "标准单位"
+    },
+    {
+      "unit_code": "uL",
+      "name": "微升（体积）",
+      "dimension": "volume",
+      "standard_unit": "mL",
+      "measurement_kind": "absolute",
+      "scale": 0.001,
+      "offset": 0.0,
+      "conversion_id": "CV-uL-v1",
+      "standard_version": "SI-2019",
+      "valid_from": "2026-01-15",
+      "note": "1 uL = 0.001 mL"
+    },
+    {
+      "unit_code": "scale_units",
+      "name": "仪器自定义标度（无公开计量定义）",
+      "dimension": "dimensionless",
+      "standard_unit": "scale_units",
+      "measurement_kind": "absolute",
+      "scale": 1.0,
+      "offset": 0.0,
+      "conversion_id": "CV-scale-v1",
+      "standard_version": "VENDOR-PROPRIETARY",
+      "valid_from": "2026-01-15",
+      "note": "无国际标准，仅受限保留"
+    },
+    {
+      "unit_code": "K_setpoint",
+      "name": "开尔文（温度设定值标准单位）",
+      "dimension": "temperature",
+      "standard_unit": "K_setpoint",
+      "measurement_kind": "setpoint",
+      "scale": 1.0,
+      "offset": 0.0,
+      "conversion_id": "CV-Kset-v1",
+      "standard_version": "SI-2019",
+      "valid_from": "2026-01-15",
+      "note": "与被测温度 K 量纲相同但测量性质不同，禁止互并"
+    }
+  ],
+  "metrics": [
+    {
+      "metric_code": "TEMP_MEAS",
+      "name": "被测温度",
+      "dimension": "temperature",
+      "standard_unit": "K",
+      "allowed_kinds": [
+        "absolute"
+      ],
+      "bounds": [
+        173.15,
+        473.15
+      ]
+    },
+    {
+      "metric_code": "TEMP_DELTA",
+      "name": "温差",
+      "dimension": "temperature",
+      "standard_unit": "K_delta",
+      "allowed_kinds": [
+        "difference"
+      ],
+      "bounds": [
+        0.0,
+        200.0
+      ]
+    },
+    {
+      "metric_code": "TEMP_SETPOINT",
+      "name": "温度设定值",
+      "dimension": "temperature",
+      "standard_unit": "K_setpoint",
+      "allowed_kinds": [
+        "setpoint"
+      ],
+      "bounds": [
+        173.15,
+        473.15
+      ]
+    },
+    {
+      "metric_code": "ANALYTE_DRY",
+      "name": "分析物浓度（干质量归一）",
+      "dimension": "mass-fraction",
+      "standard_unit": "mg_per_kg",
+      "allowed_kinds": [
+        "absolute"
+      ],
+      "bounds": [
+        0.0,
+        1000.0
+      ]
+    },
+    {
+      "metric_code": "ANALYTE_WET",
+      "name": "分析物浓度（湿体积归一）",
+      "dimension": "mass-concentration",
+      "standard_unit": "mg_per_L",
+      "allowed_kinds": [
+        "absolute"
+      ],
+      "bounds": [
+        0.0,
+        100.0
+      ]
+    },
+    {
+      "metric_code": "SAMPLE_VOLUME",
+      "name": "样品体积",
+      "dimension": "volume",
+      "standard_unit": "mL",
+      "allowed_kinds": [
+        "absolute"
+      ],
+      "bounds": [
+        0.0,
+        10000.0
+      ]
+    }
+  ],
+  "basis_rules": [
+    {
+      "metric_code": "TEMP_MEAS",
+      "basis_code": "ambient-air",
+      "required_fields": [
+        "pressure_kPa"
+      ],
+      "comparability_group": "CG-TEMP-AMB",
+      "approval_state": "approved",
+      "rule_version": "BR-T-001-v1"
+    },
+    {
+      "metric_code": "TEMP_DELTA",
+      "basis_code": "delta-reference",
+      "required_fields": [
+        "reference_temp_C"
+      ],
+      "comparability_group": "CG-TEMP-DELTA",
+      "approval_state": "approved",
+      "rule_version": "BR-TD-001-v1"
+    },
+    {
+      "metric_code": "TEMP_SETPOINT",
+      "basis_code": "chamber-setpoint",
+      "required_fields": [
+        "chamber_id"
+      ],
+      "comparability_group": "CG-TEMP-SET",
+      "approval_state": "approved",
+      "rule_version": "BR-TS-001-v1"
+    },
+    {
+      "metric_code": "ANALYTE_DRY",
+      "basis_code": "dry-mass",
+      "required_fields": [
+        "dry_temp_C",
+        "dry_humidity_pct"
+      ],
+      "comparability_group": "CG-DRY-MASS",
+      "approval_state": "approved",
+      "rule_version": "BR-DRY-001-v1"
+    },
+    {
+      "metric_code": "ANALYTE_WET",
+      "basis_code": "wet-volume",
+      "required_fields": [
+        "matrix_phase"
+      ],
+      "comparability_group": "CG-WET-VOL",
+      "approval_state": "approved",
+      "rule_version": "BR-WET-001-v1"
+    },
+    {
+      "metric_code": "ANALYTE_WET",
+      "basis_code": "gas-standard-volume",
+      "required_fields": [
+        "gas_ref_temp_C",
+        "gas_ref_pressure_kPa"
+      ],
+      "comparability_group": "CG-GAS-STD",
+      "approval_state": "approved",
+      "rule_version": "BR-GAS-001-v2"
+    },
+    {
+      "metric_code": "SAMPLE_VOLUME",
+      "basis_code": "calibrated-glassware",
+      "required_fields": [
+        "calibration_id"
+      ],
+      "comparability_group": "CG-VOL-CAL",
+      "approval_state": "approved",
+      "rule_version": "BR-VOL-001-v1"
+    },
+    {
+      "metric_code": "SAMPLE_VOLUME",
+      "basis_code": "unverified-pipette",
+      "required_fields": [
+        "calibration_id"
+      ],
+      "comparability_group": "CG-VOL-UNCAL",
+      "approval_state": "approved",
+      "rule_version": "BR-VOL-002-v1"
+    }
+  ]
+}
